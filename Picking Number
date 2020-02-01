@@ -1,0 +1,10 @@
+import sys
+
+n = int(input().strip())
+a = [int(a_temp) for a_temp in input().strip().split(' ')]
+
+dic = {}
+for v in a:
+    dic[v] = dic.get(v, 0) + 1
+    dic[v+1] = dic.get(v+1, 0) + 1
+print(max(dic.values()))
